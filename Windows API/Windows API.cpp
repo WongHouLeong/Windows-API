@@ -14,8 +14,9 @@ INT_PTR CALLBACK Dlgproc(HWND hModule, UINT type, WPARAM wParam, LPARAM lParam)
 		switch (wParam)
 		{
 		case IDOK: { //确认
-			SetDlgItemTextA(hModule, IDC_EDIT1, "Hello World!");
-			MessageBoxA(hModule, "确认！", "提示", 0);
+			char string[15];
+			GetDlgItemTextA(hModule, IDC_EDIT1, string, sizeof(string));
+			MessageBoxA(hModule, string, "提示", 0);
 			EndDialog(hModule, 0); //关闭窗口并返回值0
 			break;
 		}
