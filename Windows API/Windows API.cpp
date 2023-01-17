@@ -6,6 +6,7 @@ INT_PTR CALLBACK Dlgproc(HWND hModule, UINT type, WPARAM wParam, LPARAM lParam)
 	switch (type) {  //对话框初始化事件
 	case WM_INITDIALOG:
 	{
+		SetDlgItemTextA(hModule, IDC_EDIT1, "Hello");
 		MessageBoxA(hModule, "初始化啦！", "提示", 0);
 		break;
 	}
@@ -13,6 +14,7 @@ INT_PTR CALLBACK Dlgproc(HWND hModule, UINT type, WPARAM wParam, LPARAM lParam)
 		switch (wParam)
 		{
 		case IDOK: { //确认
+			SetDlgItemTextA(hModule, IDC_EDIT1, "Hello World!");
 			MessageBoxA(hModule, "确认！", "提示", 0);
 			EndDialog(hModule, 0); //关闭窗口并返回值0
 			break;
