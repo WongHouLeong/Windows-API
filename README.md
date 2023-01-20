@@ -9,3 +9,6 @@
 >- MessageBoxA
 >- DialogBoxParamA
 >- EndDialog
+>- SetDlgItemTextA
+>- GetDlgItemTextA
+>- GetDlgItem

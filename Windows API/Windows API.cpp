@@ -8,6 +8,7 @@ INT_PTR CALLBACK Dlgproc(HWND hModule, UINT type, WPARAM wParam, LPARAM lParam)
 	{
 		SetDlgItemTextA(hModule, IDC_EDIT1, "Hello");
 		MessageBoxA(hModule, "初始化啦！", "提示", 0);
+		HWND hwnd = GetDlgItem(hModule, IDC_EDIT1); //这里的IDC_EDIT1是对话框里的编辑框组件ID
 		break;
 	}
 	case WM_COMMAND: { //触发的组件ID
